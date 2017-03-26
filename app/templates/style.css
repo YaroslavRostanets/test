@@ -114,3 +114,14 @@ fieldset.form-group {
 input::-webkit-input-placeholder {
     color: #CAD3D9 !important;
 }
+table {
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.24);
+    box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.24);
+}
+@media (max-width: 940px){
+    #list li {
+        width: 100%;
+    }
+}

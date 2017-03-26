@@ -20,6 +20,9 @@
 </head>
 <body>
     <div class="main">
+        <h2 class="task-headline">
+            Детальная страница
+        </h2>
         <table class="table">
             <thead>
             <tr>

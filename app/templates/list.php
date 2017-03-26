@@ -25,7 +25,7 @@
         <ul id="list">
             <? foreach ( $resultArr as $value ):?>
             <li data-id="<?= $value['id']?>" class="one-tile">
-                <a href="#">
+                <a href="<?= SITE_PATH.'detail/'.$value['id']?> ">
                     <div class="flex center">
                         <div data-area="first_name_ed"><?= $value['first_name']?></div>
                         <div data-area="last_name_ed"><?= $value['last_name']?></div>
