@@ -1,7 +1,6 @@
 <?php
 
 require_once(ROOT.'config/dbconnect.php');
-require_once (ROOT.'templates/list.php');  //Шаблон
 
 class createCtrl {
 
@@ -12,11 +11,18 @@ class createCtrl {
     public function create(){
         global $con;
 
-        echo 'create';
+        $str = implode(", ",$_GET['quantity']);
 
+        $query = "INSERT INTO `u539267858_anma`.`entity` (`id`,`first_name`,`last_name`,`birthdate`,`description`,`marital_status`,`language`,`quantity`)".
+            " VALUES (NULL,'$_GET[first_name]','$_GET[last_name]','$_GET[birthdate]','$_GET[description]','$_GET[marital_status]','$_GET[lang]',".
+            "'$str');";
 
+        $answer = mysqli_query($con,$query);
 
+        echo $answer;
     }
+
+
 }
 
 

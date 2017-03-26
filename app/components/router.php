@@ -28,7 +28,6 @@ class Router {
 
 
                 if(file_exists($controllerFile)){
-
                     include_once($controllerFile);
                 }
 
