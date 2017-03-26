@@ -30,11 +30,10 @@ body {
     position: relative;
 }
 #list li {
-    width: 100%;
-    height: auto;
+    width: 49%;
+    height: 75px;
     min-height: 10px;
     background: #FFF;
-    display: block;
     border: 1px solid #CCC;
     color: #666;
     border-top: 9px solid #39D1B4;
@@ -42,22 +41,36 @@ body {
     margin-bottom: 10px;
     transition: all 0.3s;
     position: relative;
-    width: 49%;
-    flex-wrap: wrap;
+    z-index: 9;
+    display: inline-block;
 }
 #list li:hover {
-    opacity: 0.8;
     border-top: 9px solid #F0553B;
+    z-index: 99;
+}
+#list li:hover > a {
+    max-height: 400px;
 }
 #list li > a {
-    display: block;
+    display: inline-block;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    display: flex;
+    background: #fff;
     justify-content: space-between;
     font-weight: lighter;
     color: #666666;
     padding: 20px;
+    max-height: 65px;
+    overflow: hidden;
+    position: absolute;
+    transition: max-height 0.3s ease;
+}
+#list li > a:hover {
+    z-index: 99;
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.24);
+    box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.24);
 }
 #list li > a:hover,
 #list li > a:focus {
@@ -70,4 +83,34 @@ body {
     margin-bottom: 20px;
     font-size: 1.6em;
     position: relative;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.center {
+    align-items: center;
+}
+.description {
+    border-top: 1px solid #C8C7BB;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C8C7BB;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+.left .form-control {
+    width: auto;
+    zoom: 1.3;
+}
+fieldset.form-group {
+    padding-top: 6px;
+}
+.quantity {
+    max-height: 60px;
+    padding: 0 .75rem;
+}
+input::-webkit-input-placeholder {
+    color: #CAD3D9 !important;
 }
