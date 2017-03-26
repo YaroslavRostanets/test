@@ -13,8 +13,6 @@ $(document).ready(function(){
         $('#birthdate_ed').val( tile.find("div[data-area='birthdate_ed']").text() );
         $('#description_ed').val( tile.find("div[data-area='description_ed']").text().trim() );
 
-        console.log( tile.find("div[data-area='description_ed']" ).text());
-
         if(tile.find("span[data-area='marital_status']").text()){
             $('#marital_status').prop('checked', true);
         } else {
@@ -24,7 +22,6 @@ $(document).ready(function(){
         $('#'+radioID).prop('checked', true);
 
         var attrArr = tile.find('div[data-area]');
-        console.log(attrArr);
     });
 
 
@@ -63,6 +60,13 @@ $(document).ready(function(){
                 (response)? location.reload() : false;
             }
         });
+    });
+
+    $('.one-tile > a').click(function(event){
+        event.preventDefault();
+        if(!$(event.target).closest('.but-cont').length){
+           window.location.href = $(this).attr("href");
+        }
     });
 
 });

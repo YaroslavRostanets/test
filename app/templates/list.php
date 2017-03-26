@@ -31,7 +31,7 @@
                         <div data-area="last_name_ed"><?= $value['last_name']?></div>
                         <div data-area="birthdate_ed"><?= $value['birthdate']?></div>
                         <div data-area="language_ed"><?= $value['language']?></div>
-                        <div>
+                        <div class="but-cont">
                             <button type="button" class="btn btn-primary btn-sm edit-entity" data-toggle="modal" data-target="#editModal">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </button>
